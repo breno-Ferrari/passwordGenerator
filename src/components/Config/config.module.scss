@@ -1,0 +1,97 @@
+.config{
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__title{
+            color: lightgrey;
+            font-family: monospace, 'sans-serif';
+            font-size: clamp(1.5rem,1vw, 2rem); 
+        }
+        &__count{
+            color: lightgreen;
+            font-family: monospace, 'sans-serif';
+            font-size: clamp(1.5rem,1vw, 2rem); 
+        }
+    }
+    &__sliderBar{
+        width: 30rem;
+        margin-top: 1rem;
+        &__slider{
+            appearance: none;
+            //mexe na barra
+            &[type=range] { 
+                cursor: pointer;
+                width: 30rem;
+                height: 0.5rem;
+                background: rgb(234, 238, 251);
+                border-radius: 50px;
+                //mexe na cor da esquerda
+                background-image: linear-gradient(lightgreen, lightgreen);
+                background-repeat: no-repeat;
+                
+            }
+            // chrome
+            &[type=range]::-webkit-slider-thumb {
+                appearance: none;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 2rem;
+                background: rgb(16, 213, 194);
+                transition: all 0.3s;
+                &:hover{
+                  
+                    transition: all 0.3s;
+                }
+                &:active{
+                    
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        &__content{
+            display: flex;
+            gap: 0.5rem;
+            margin: .5rem 0rem;
+            justify-content: flex-start;
+            &__label{
+                color: #fff;
+                font-family: monospace, 'sans-serif';
+                font-size: clamp(1rem,1vw, 2rem); 
+            }
+            &__input[type="checkbox"]{
+                cursor: pointer;
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: #24232A;
+                margin: 0;
+                width: 1rem;
+                height: 1rem;
+                border: 0.15rem solid #fff;
+                transform: translateY(-0.075em);
+
+                display: grid;
+                place-content: center;
+                &::before{
+                    content: "";
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    transform: scale(0);
+                    transition: 120ms transform ease-in-out;
+                    box-shadow: inset 1em 1em lightgreen;
+                    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+                }
+                &:checked::before{
+                    transform: scale(1);
+                }
+            }
+        }
+      
+    }
+   
+}

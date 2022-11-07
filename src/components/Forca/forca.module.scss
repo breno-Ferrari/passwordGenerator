@@ -1,0 +1,35 @@
+.strength{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background-color: #18171E;
+    margin: 0  auto;
+    width: 28rem;
+    padding: 1rem;
+    color: #fff;
+    margin-top: 1rem;
+    &__text{
+       width: 18rem;
+       font-family: monospace, 'sans-serif';
+       font-size: clamp(1.5rem,1vw, 2rem); 
+    }
+    &__nivel{
+        display: flex;
+        justify-content: space-around;
+        width: 12rem;
+        &__container{
+            font-family: monospace, 'sans-serif';
+            font-size: clamp(1rem,1vw, 2rem); 
+        }
+        &__progress{
+            display: flex;
+            gap: 0.5rem;
+            &__container{
+                height: 1rem;
+                width: 0.5rem;
+                border: 1px solid #fff;
+            }
+        }
+    }
+}
