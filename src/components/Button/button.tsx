@@ -28,8 +28,8 @@ export default function Button({field}:Props){
             ...(checkSimbolo ? simbolos : [])
         ];
 
-        if(caracterDisponiveis.length === 0) return -1
-        
+        if(caracterDisponiveis.length === 0) return
+
         for(let i = 0 ; i < field ; i++){
             const posicaoAleatoria = Math.floor(Math.random() * caracterDisponiveis.length);
             senha+=caracterDisponiveis[posicaoAleatoria]
