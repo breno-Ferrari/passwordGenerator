@@ -17,6 +17,10 @@
         transition: all 0.2s ease-in-out;
         font-family: monospace, 'sans-serif';
         font-size: clamp(1rem,1vw, 2rem); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
         &:hover{
             background-color: #24232A;
             border-color: lightgreen;

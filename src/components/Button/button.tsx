@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./button.module.scss"
-
+import { BsArrowRightShort } from "react-icons/bs";
 type Props ={
     field:number
 }
@@ -38,7 +38,7 @@ export default function Button({field}:Props){
     };
     return(
         <div className={styles.buttonContainer}>
-            <button className={styles.buttonContainer__btn} onClick={GeneratePassword}>Criar senha</button>
+            <button className={styles.buttonContainer__btn} onClick={GeneratePassword}>Criar senha <BsArrowRightShort/></button>
         </div>
     )
 }

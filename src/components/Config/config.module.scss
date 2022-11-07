@@ -24,7 +24,7 @@
                 cursor: pointer;
                 width: 30rem;
                 height: 0.5rem;
-                background: rgb(234, 238, 251);
+                background: #1a1920;
                 border-radius: 50px;
                 //mexe na cor da esquerda
                 background-image: linear-gradient(lightgreen, lightgreen);
@@ -36,16 +36,19 @@
                 appearance: none;
                 height: 2rem;
                 width: 2rem;
+                border: 0.15rem solid lightgreen;
                 border-radius: 2rem;
-                background: rgb(16, 213, 194);
-                transition: all 0.3s;
+                background: lightgreen;
+                transition: all 0.2s;
                 &:hover{
-                  
-                    transition: all 0.3s;
+                    background-color: #24232A;
+                    border: 0.15rem solid lightgreen;
+                    transition: all 0.2s;
                 }
                 &:active{
-                    
-                    transition: all 0.3s;
+                    background-color: #24232A;
+                    border: 0.15rem solid lightgreen;
+                    transition: all 0.2s;
                 }
             }
         }
