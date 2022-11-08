@@ -10,10 +10,11 @@ type Props ={
 export default function Button({field}:Props){
     const ref = useRef<HTMLButtonElement>(null)
     const [btn, setBtn] = useState(false)
-    let checkedFields = document.querySelectorAll<HTMLInputElement>('form div input[type="checkbox"]:checked')
-    let checkedFieldsLength = checkedFields.length;
+   
 
     useEffect(() => {
+        let checkedFields = document.querySelectorAll<HTMLInputElement>('form div input[type="checkbox"]:checked')
+        let checkedFieldsLength = checkedFields.length;
         let button =  ref.current  
         if(checkedFieldsLength > 0){
             button!.disabled = false; 
@@ -22,7 +23,7 @@ export default function Button({field}:Props){
             button!.disabled = true; 
             setBtn(false)
         }        
-      },[checkedFieldsLength]);
+      },[]);
 
     function GeneratePassword(){
         const inputSenha = document.querySelector<HTMLInputElement>("#senha") as HTMLInputElement;
