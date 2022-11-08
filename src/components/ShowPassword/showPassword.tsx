@@ -13,7 +13,7 @@ export default function ShowPassword(){
     };
     return(
         <div className={styles.showPassword}>
-            <input placeholder="P4$5W0rD!" id="senha" name="senha" maxLength={16} ref={ref} className={styles.showPassword__content}/>
+            <input placeholder="P4$5W0rD!" id="senha" name="senha" maxLength={16} ref={ref} className={styles.showPassword__content} readOnly/>
             <button className={styles.showPassword__copy} onClick={copyValue}><FaRegCopy/></button>
         </div>
     )
