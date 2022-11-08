@@ -101,7 +101,11 @@
                 }
             }
         }
-      
+        &__secure{
+            font-family: monospace, 'sans-serif';
+            font-size: clamp(1rem,1vw, 2rem); 
+            color: red;
+        }
     }
 
 }

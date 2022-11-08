@@ -8,15 +8,18 @@ import Button from "../Button/button";
 
 
 export default function Config(){
-    const [field, setField] = useState(1);
+    const [field, setField] = useState(8);
     const container = useRef<HTMLDivElement>(null)
     const [qtd, setQtd] = useState(0);
     const [locked, setLocked] = useState(true);
-    const MAX = 16;
+    const MAX = 20;
     
     function getBackgroundSize(){
+        let media = (field/MAX)
+        console.log(media);
+        
         return {
-          backgroundSize: `${(field * 100) / MAX}% 100%`
+          backgroundSize: `${media*100}%`
         };
     };
     function VerifyInputField(){
@@ -81,14 +84,14 @@ export default function Config(){
                     value={field}
                 />
             </div>
-            <form className={styles.config__form} onChange={VerifyInputField} id="form">
+            <form className={styles.config__form} onChange={VerifyInputField}>
                 <div className={styles.config__form__content}>
                     <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" className={styles.config__form__content__input}></input>
                     <label htmlFor="uppercase" className={styles.config__form__content__label}>Incluir letras maiusculas</label>
                 </div>
                 <div className={styles.config__form__content}>
                     <input type="checkbox" id="lowercase" name="lowercase" value="lowercase" className={styles.config__form__content__input}></input>
-                    <label htmlFor="uppercase" className={styles.config__form__content__label}>Incluir letras minusculas</label>
+                    <label htmlFor="lowercase" className={styles.config__form__content__label}>Incluir letras minusculas</label>
                 </div>
                 <div className={styles.config__form__content}>
                     <input type="checkbox" id="numbers" name="numbers" value="numbers" className={styles.config__form__content__input}></input>
@@ -97,9 +100,12 @@ export default function Config(){
                 <div className={styles.config__form__content}>
                     <input type="checkbox" id="symbols" name="symbols" value="symbols" className={styles.config__form__content__input}></input>
                     <label htmlFor="symbols" className={styles.config__form__content__label}>Incluir simbolos</label>
-                </div>       
+                </div>  
+                {field <8 ?  
+                <span className={styles.config__form__secure}>* Recomenda-se que a senha tenha entre 8 e 20 caracteres</span>  :""  }
+                
             </form>
-            <Forca qtd={qtd}>
+            <Forca checkedLength={qtd} char={field}>
                 <Progress ref={container}/>
             </Forca>
             <Button field={field} checked={locked}/>

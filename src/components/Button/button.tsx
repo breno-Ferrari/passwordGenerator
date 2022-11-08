@@ -15,8 +15,9 @@ export default function Button({field,checked}:Props){
     useEffect(() => {
         let button =  ref.current  
         let checkedFields = document.querySelectorAll<HTMLInputElement>('form div input[type="checkbox"]:checked');
+        
         let checkedFieldsLength = checkedFields.length;
-        if(checkedFieldsLength > 0){
+        if(checkedFieldsLength > 0 ){
             button!.disabled = false;
             setBtn(true);
         }else{
