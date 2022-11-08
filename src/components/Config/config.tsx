@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./config.module.scss"
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Forca from "../Forca/forca";
 import Progress from "../Progress/progress";
 import Button from "../Button/button";
@@ -11,6 +11,7 @@ export default function Config(){
     const [field, setField] = useState(1);
     const container = useRef<HTMLDivElement>(null)
     const [qtd, setQtd] = useState(0);
+    const [locked, setLocked] = useState(true);
     const MAX = 16;
     
     function getBackgroundSize(){
@@ -24,7 +25,7 @@ export default function Config(){
 
         const inputFields = document.querySelectorAll<HTMLInputElement>('form div input')
         const inputFieldsLenght = inputFields.length
-
+        setLocked(!locked)
         setQtd(checkedFieldsLenght)
 
         for(let i = 0 ; i <= inputFieldsLenght -1 ; i++){
@@ -61,6 +62,7 @@ export default function Config(){
             } 
         }
     };
+
 
     return(
         <div className={styles.config}>
@@ -100,7 +102,7 @@ export default function Config(){
             <Forca qtd={qtd}>
                 <Progress ref={container}/>
             </Forca>
-            <Button field={field}/>
+            <Button field={field} checked={locked}/>
         </div>
 
         
