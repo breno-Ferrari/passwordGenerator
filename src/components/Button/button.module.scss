@@ -26,4 +26,39 @@
             transition: all 0.2s ease-in-out;
         }
     }
+    &__disabled{
+        cursor: pointer;
+        height: 3rem;
+        width: 100%;
+        background-color: #c6c6c61e;
+        border-color: #c6c6c61e;
+        color: #c6c6c6;
+        font-size: clamp(1rem,1vw, 2rem); 
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        &:hover{
+           animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      } 
 }

@@ -79,7 +79,7 @@ export default function Config(){
                     value={field}
                 />
             </div>
-            <form className={styles.config__form} onChange={VerifyInputField}>
+            <form className={styles.config__form} onChange={VerifyInputField} id="form">
                 <div className={styles.config__form__content}>
                     <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" className={styles.config__form__content__input}></input>
                     <label htmlFor="uppercase" className={styles.config__form__content__label}>Incluir letras maiusculas</label>
