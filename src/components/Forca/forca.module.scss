@@ -5,19 +5,19 @@
     align-items: center;
     background-color: #18171E;
     margin: 0  auto;
-    width: 28rem;
+    // width: 28rem;
     padding: 1rem;
     color: #fff;
     margin-top: 1rem;
     &__text{
-       width: 18rem;
+    //    width: 18rem;
        font-family: monospace, 'sans-serif';
        font-size: clamp(1.5rem,1vw, 2rem); 
     }
     &__nivel{
         display: flex;
         justify-content: space-around;
-        width: 12rem;
+        // width: 12rem;
         &__container{
             font-family: monospace, 'sans-serif';
             font-size: clamp(1rem,1vw, 2rem); 

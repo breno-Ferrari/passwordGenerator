@@ -1,12 +1,11 @@
 .buttonContainer{
     display: flex;
     justify-content: center;
-    width: 30rem;
-    margin-top: 1rem;
+    margin: 1rem auto;
     &__btn{
         cursor: pointer;
         height: 3rem;
-        width: 30rem;
+        width: 100%;
         background-color: lightgreen;
         border-color: lightgreen;
         color: #24232A;
@@ -27,21 +26,4 @@
             transition: all 0.2s ease-in-out;
         }
     }
-    &__error{
-        position: relative;
-        animation: shake 0.2s;
-    }
-}
-
-
-@keyframes shake {
-	0%,100%{
-		left: 0px;
-	}
-	20%,80%{
-		left: -15px;
-	}
-	40%,60%{
-		left: 15px;
-	}
 }

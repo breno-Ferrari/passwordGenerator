@@ -7,6 +7,9 @@
             color: lightgrey;
             font-family: monospace, 'sans-serif';
             font-size: clamp(1.5rem,1vw, 2rem); 
+            @media (max-width:30rem){
+                font-size: clamp(1.2rem,1vw, 2rem); 
+            }
         }
         &__count{
             color: lightgreen;
@@ -15,14 +18,13 @@
         }
     }
     &__sliderBar{
-        width: 30rem;
         margin-top: 1rem;
         &__slider{
             appearance: none;
             //mexe na barra
             &[type=range] { 
                 cursor: pointer;
-                width: 30rem;
+                width: 100%;
                 height: 0.5rem;
                 background: #1a1920;
                 border-radius: 50px;
@@ -50,6 +52,11 @@
                     border: 0.15rem solid lightgreen;
                     transition: all 0.2s;
                 }
+                @media (max-width:30rem){
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    border: 0.15rem solid lightgreen;
+                }
             }
         }
     }
@@ -60,7 +67,7 @@
         &__content{
             display: flex;
             gap: 0.5rem;
-            margin: .5rem 0rem;
+            margin: 0.5rem 0rem;
             justify-content: flex-start;
             &__label{
                 color: #fff;
@@ -96,5 +103,5 @@
         }
       
     }
-   
+
 }

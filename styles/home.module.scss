@@ -4,6 +4,8 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    max-width: 30rem;
+    margin: 0 auto;
     &__title{
         text-align: center;
         color: lightgray;
@@ -13,9 +15,15 @@
     &__box{
         display: flex;
         flex-direction: column;
-        width: 30rem;
         background-color: #24232A;
-        margin-top: 1rem;
         padding: 1rem;
+        margin: 1rem auto;
+        width: 100%;
+    }
+    @media (max-width:30rem){
+        width: 90%;
+        &__box{
+            width: 90%;
+        }
     }
 }
